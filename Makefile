@@ -1,14 +1,14 @@
 CONTAINER	:= iframely
 HUB_USER	:= ${USER}
 IMAGE_NAME	:= ${HUB_USER}/${CONTAINER}
-VERSION		:= v1.3.1
-EXPOSEPORT	:= 8061
+VERSION		:= v1.4.4
+EXPOSEPORT	:= 8080
 PUBLISHPORT := ${EXPOSEPORT}
 
 build:
-	git fetch upstream
+	git fetch origin
 	git checkout master
-	git merge upstream/master
+	git merge origin/master
 	git branch -f tag-${VERSION}
 	git checkout tag-${VERSION}
 	docker \

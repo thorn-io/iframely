@@ -15,8 +15,8 @@
 
     var config = {
 
-        baseAppUrl: "",
-        port: 8061,
+        baseAppUrl: process.env.IFRAMELY_BASE_APP_URL || "",
+        port: parseInt(process.env.IFRAMELY_PORT) || 8080,
         relativeStaticUrl: "/s",
         use_http2: true,
         DEBUG: false,

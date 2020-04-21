@@ -1,6 +1,6 @@
 FROM node:current-alpine
 
-EXPOSE 8061
+EXPOSE 8080
 
 COPY . /iframely
 
