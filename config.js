@@ -17,6 +17,7 @@
 
         baseAppUrl: process.env.IFRAMELY_BASE_APP_URL || "",
         port: parseInt(process.env.IFRAMELY_PORT) || 8080,
+        allowedOrigins: process.env.IFRAMELY_ALLOWED_ORIGINS ? process.env.IFRAMELY_ALLOWED_ORIGINS.split(' ') : [],
         relativeStaticUrl: "/s",
         use_http2: true,
         DEBUG: false,
